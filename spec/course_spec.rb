@@ -1,4 +1,5 @@
 require './lib/course'
+require './lib/student'
 
 RSpec.describe Course do
   describe '#initialize' do
@@ -35,7 +36,7 @@ RSpec.describe Course do
       student1 = Student.new({name: "Morgan", age: 21})
       student2 = Student.new({name: "Jordan", age: 29})
 
-      course_1.enroll(student1)
+      course_2.enroll(student1)
       course_2.enroll(student2)
 
       expect(course_1.full?).to eq false

@@ -18,7 +18,7 @@ class Gradebook
   end
 
   def list_students_below_grade(grade)
-    list_all_students.select do |student|
+    list_students.select do |student|
       student.grade < grade
     end
   end

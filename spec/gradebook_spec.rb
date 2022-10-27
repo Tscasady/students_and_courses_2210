@@ -38,7 +38,7 @@ RSpec.describe Gradebook do
     end
   end
 
-  describe '#list_all_students' do
+  describe '#list_students' do
     it 'can return a list of students in all courses' do
       gradebook = Gradebook.new("Mike")
 
@@ -54,7 +54,7 @@ RSpec.describe Gradebook do
       gradebook.add_course(course_1)
       gradebook.add_course(course_2)
 
-      expect(gradebook.list_all_students).to eq [student1, student2] 
+      expect(gradebook.list_students).to eq [student1, student2] 
     end
   end
 

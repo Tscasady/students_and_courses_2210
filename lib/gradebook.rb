@@ -11,7 +11,7 @@ class Gradebook
     @courses << course
   end
 
-  def list_all_students
+  def list_students
     @courses.map do |course|
       course.students
     end.flatten

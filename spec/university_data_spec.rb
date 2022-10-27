@@ -87,7 +87,7 @@ RSpec.describe UniversityData do
       university.add_gradebook(gradebook)
       university.add_gradebook(gradebook_2)
 
-      expect(university.list_students_below_grade(50)).to eq [student1]
+      expect(university.list_all_students_below_grade(50)).to eq [student1]
 
     end
   end

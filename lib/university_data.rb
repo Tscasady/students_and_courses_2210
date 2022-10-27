@@ -12,7 +12,7 @@ class UniversityData
 
   def list_all_students
     @gradebooks.map do |gradebook|
-      gradebook.list_all_students
+      gradebook.list_students
     end.flatten
   end
 

@@ -40,7 +40,7 @@ RSpec.describe Gradebook do
 
   describe '#list_all_students' do
     it 'can return a list of students in all courses' do
-      gradebook = Gradebook.new("Jamison")
+      gradebook = Gradebook.new("Mike")
 
       course_1 = Course.new("Calculus", 2) 
       course_2 = Course.new("History", 2)

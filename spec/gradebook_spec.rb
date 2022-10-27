@@ -1,4 +1,7 @@
-'require ./lib/gradebook'
+require './lib/gradebook'
+require './lib/course'
+require './lib/student'
+
 
 RSpec.describe Gradebook do
   describe '#initialize' do

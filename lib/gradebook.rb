@@ -22,4 +22,10 @@ class Gradebook
       student.grade < grade
     end
   end
+
+  def list_students_with_grade_range(low_grade, high_grade)
+    list_students.select do |student|
+      (student.grade > low_grade) && (student.grade < high_grade)
+    end
+  end
 end

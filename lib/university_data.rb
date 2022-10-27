@@ -22,4 +22,10 @@ class UniversityData
     end.flatten
   end
 
+  def list_all_students_with_grade_range(low_grade, high_grade)
+    @gradebooks.map do |gradebook|
+      gradebook.list_students_with_grade_range(low_grade, high_grade)
+    end.flatten
+  end
+
 end

@@ -80,4 +80,28 @@ RSpec.describe Gradebook do
       expect(gradebook.list_students_below_grade(50)).to eq [student1]
     end
   end
+
+  describe '#list_students_with_grade_range' do
+    it 'can return students that fall within a certain grade range' do
+      gradebook = Gradebook.new("Jamison")
+
+      course_1 = Course.new("Calculus", 2) 
+      course_2 = Course.new("History", 2)
+
+      student1 = Student.new({name: "Morgan", age: 21})
+      student1.log_score(47)
+      student1.log_score(35)
+      student2 = Student.new({name: "Jordan", age: 29})
+      student2.log_score(97)
+
+      course_1.enroll(student1)
+      course_2.enroll(student2)
+
+      gradebook.add_course(course_1)
+      gradebook.add_course(course_2)
+
+      expect(gradebook.list_students_with_grade_range(50, 100)).to eq [student2]
+
+    end
+  end
 end
